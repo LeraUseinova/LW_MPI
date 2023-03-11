@@ -1,0 +1,101 @@
+Task_2
+C:\Users\Lera\Desktop\программирование\Лабораторная_MPI\x64\Debug>mpiexec -n 2 Лабораторная_MPI.exe
+Process 1 received message Hello from process 0
+Process 0 received message Hello you process 0, it is process 1
+Time per exchange: 0.0051107 seconds
+________________________________________________________________________________________________________
+
+Task3: Ring_relay
+C:\Users\Lera\Desktop\программирование\Лабораторная_MPI\x64\Debug>mpiexec -n 2 Лабораторная_MPI.exe
+Process 0 sent message 0
+Process 1 received message 0
+Process 1 sent message 1
+Process 0 received message 1
+
+C:\Users\Lera\Desktop\программирование\Лабораторная_MPI\x64\Debug>mpiexec -n 4 Лабораторная_MPI.exe
+Process 0 sent message 0
+Process 1 received message 0
+Process 1 sent message 1
+Process 2 received message 1
+Process 2 sent message 2
+Process 3 received message 2
+Process 3 sent message 3
+Process 0 received message 3
+
+
+Task3: Shift
+C:\Users\Lera\Desktop\программирование\Лабораторная_MPI\x64\Debug>mpiexec -n 4 Лабораторная_MPI.exe
+Process 0 sent message 0 to 1
+Process 0 received message 3 from 3
+Process 1 sent message 1 to 2
+Process 1 received message 0 from 0
+Process 2 sent message 2 to 3
+Process 2 received message 1 from 1
+Process 3 sent message 3 to 0
+Process 3 received message 2 from 2
+
+
+Task3: Master-Slave
+C:\Users\Lera\Desktop\программирование\Лабораторная_MPI\x64\Debug>mpiexec -n 4 Лабораторная_MPI.exe
+Process 0 received message 1
+Process 0 received message 2
+Process 0 received message 3
+
+
+Task3: All to all
+C:\Users\Lera\Desktop\программирование\Лабораторная_MPI\x64\Debug>mpiexec -n 4 Лабораторная_MPI.exe
+Process 3 received message 0 from process 0
+Process 1 received message 0 from process 0
+Process 0 received message 1 from process 1
+Process 2 received message 0 from process 0
+Process 3 received message 1 from process 1
+Process 0 received message 2 from process 2
+Process 2 received message 1 from process 1
+Process 1 received message 2 from process 2
+Process 3 received message 2 from process 2
+Process 0 received message 3 from process 3
+Process 1 received message 3 from process 3
+Process 2 received message 3 from process 3
+________________________________________________________________________________________________________
+
+Task_4
+C:\Users\Lera\Desktop\программирование\Лабораторная_MPI\x64\Debug>mpiexec -n 2 Лабораторная_MPI.exe
+Iteration 1: Sent and received message of length 1
+Iteration 2: Sent and received message of length 2
+Iteration 3: Sent and received message of length 4
+Iteration 4: Sent and received message of length 8
+Iteration 5: Sent and received message of length 16
+Iteration 6: Sent and received message of length 32
+Iteration 7: Sent and received message of length 64
+Iteration 8: Sent and received message of length 128
+Iteration 9: Sent and received message of length 256
+Iteration 10: Sent and received message of length 512
+Iteration 11: Sent and received message of length 1024
+Iteration 12: Sent and received message of length 2048
+Iteration 13: Sent and received message of length 4096
+Iteration 14: Sent and received message of length 8192
+Iteration 15: Sent and received message of length 16384
+Iteration 16: Sent and received message of length 32768
+Iteration 17: Sent and received message of length 65536
+Maximum length of message: 17
+________________________________________________________________________________________________________
+
+monte_carlo_seq
+Integral value: 0.357249
+Error estimate: 1.19384e-05
+Desired accuracy not reached.
+Time for sequential monte-carlo: 178.996 s
+
+
+monte_carlo_mpi
+C:\Users\Lera\Desktop\программирование\Лабораторная_MPI\x64\Debug>mpiexec -n 4 Лабораторная_MPI.exe
+Integral value: 0.357241
+Error estimate: 1.19379e-05
+Desired accuracy not reached.
+Time for mpi monte-carlo: 50.423 s
+
+C:\Users\Lera\Desktop\программирование\Лабораторная_MPI\x64\Debug>mpiexec -n 8 Лабораторная_MPI.exe
+Integral value: 0.357244
+Error estimate: 1.19381e-05
+Desired accuracy not reached.
+Time for mpi monte-carlo: 33.4878 s
